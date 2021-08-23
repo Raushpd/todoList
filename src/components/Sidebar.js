@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
 import { FaInbox, FaRegCalendarAlt, FaRegCalendar } from 'react-icons/fa';
 
 const Sidebar = ({ selectedTab, setSelectedTab }) => {
@@ -11,10 +11,10 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
             }>
                 <FaInbox className="icon" />
                 Inbox</div>
-            <div onClick={() =>
+            <div className="active" onClick={() =>
                 setSelectedTab("TODAY")
             }><FaRegCalendarAlt className="icon" />Today</div>
-            <div onClick={() =>
+            <div className="active" onClick={() =>
                 setSelectedTab("NEXT_7")
             }><FaRegCalendar className="icon" />Next 7 Days</div>
         </div>
